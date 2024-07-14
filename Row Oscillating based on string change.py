@@ -18,8 +18,7 @@ get_ipython().run_line_magic('matplotlib', 'notebook')
 direct = "C:/Users/vhernan7/Downloads/"
 
 #++++++***************** REMEMBER TO INPUT A CSV +++++++++++++++++++++++++**********
-                        #---------------------
-                        #---------------------
+
 df = pd.read_csv(direct+"Book39.csv", encoding='latin-1') 
 #create a new column where you put the first 5 strings in the seedling number.
 df['new_col'] = df['Seedling'].astype(str).str[:5]
@@ -41,13 +40,13 @@ df[["New_Number"]] = df[["New_Number"]].apply(pd.to_numeric)
 df['is_odd'] = (df['New_Number'] & 1) == 1
 
 
-#Make the pink tags by calling the odd numbers.Put in the desktop and call it Block5_Pink.xlsx
+#Make the pink tags by calling the odd numbers.Put in the downloads
 dfPink = df[df['is_odd'] == True]
 print (dfPink)
 dfPink.to_excel(r'/Users/vhernan7/Downloads/Block7_West_color2.xlsx')
 
 
-#Make the blue tags by calling the even numbers.Put in the desktop and call it Block5_Blue.xlsx
+#Make the blue tags by calling the even numbers.Put in the downloads
 dfBlue = df[df['is_odd'] == False]
 print (dfBlue)
 dfBlue.to_excel(r'/Users/vhernan7/Downloads/Block7_West_color1.xlsx')
