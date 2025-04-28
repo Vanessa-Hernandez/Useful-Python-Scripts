@@ -20,8 +20,8 @@ direct = "C:/Users/vhernan7/Downloads/"
 #++++++***************** REMEMBER TO INPUT A CSV +++++++++++++++++++++++++**********
 
 df = pd.read_csv(direct+"Book39.csv", encoding='latin-1') 
-#create a new column where you put the first 5 strings in the seedling number.
-df['new_col'] = df['Seedling'].astype(str).str[:5]
+#create a new column where you put the first 5 strings in the long word or number.
+df['new_col'] = df['long-word'].astype(str).str[:5]
 
 #create a new column and call it Number and put them in numerical order.
 
